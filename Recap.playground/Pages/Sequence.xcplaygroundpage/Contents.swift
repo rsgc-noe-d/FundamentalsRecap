@@ -25,11 +25,24 @@ import Cocoa
 import PlaygroundSupport
 
 // Create canvas
-let canvas = Canvas(width: 500, height: 400)
+let canvas = Canvas(width: 500, height: 500)
 
-// Replace this comment and add your code below 
+// Triangle
+var points : [NSPoint] = [] // create list (array)
+points.append(NSPoint(x: 0, y: 0) )
+points.append(NSPoint(x: 250, y: 500) )
+points.append(NSPoint(x: 500, y: 0) )
 
 
+
+canvas.drawCustomShape(with: points)
+
+canvas.fillColor = Color.white
+
+canvas.drawEllipse(centreX: 250, centreY: 175, width: 200, height: 100)
+
+canvas.fillColor = Color.black
+canvas.drawEllipse(centreX: 250, centreY: 200, width: 100, height: 100)
 /*:
  ## Template code
  The code below is necessary to see results in the Assistant Editor at right. Please do not remove.
