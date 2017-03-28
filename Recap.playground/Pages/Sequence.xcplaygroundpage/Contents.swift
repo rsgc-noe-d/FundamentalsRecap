@@ -39,7 +39,7 @@ canvas.drawRectangle(bottomLeftX: 100, bottomLeftY: 0, width: 100, height: 400)
 
 
 
-
+canvas.drawEllipse(centreX: 75, centreY: 150, width: 100, height: 100)
 
 
 
