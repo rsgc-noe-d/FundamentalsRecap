@@ -25,10 +25,27 @@ import Cocoa
 import PlaygroundSupport
 
 // Create canvas
-let canvas = Canvas(width: 400, height: 400)
+let canvas = Canvas(width: 490, height: 450)
 
-// Replace this comment and add your code below
+// set up
 
+canvas.drawShapesWithFill = false
+canvas.defaultBorderWidth = 10
+canvas.defaultLineWidth = 10
+
+// make a cicle - brown
+
+canvas.borderColor = Color.init(hue: 26, saturation: 69, brightness: 37, alpha: 100)
+canvas.drawEllipse(centreX: 70, centreY: 400, width: 60, height: 60)
+
+
+// make a circle - Orange
+canvas.borderColor = Color.init(hue: 22, saturation: 93, brightness: 90, alpha: 100)
+canvas.drawEllipse(centreX: 70, centreY: 400, width: 41, height: 41)
+
+// make a circle - Yellow
+canvas.borderColor = Color.init(hue: 53, saturation: 93, brightness: 98, alpha: 100)
+canvas.drawEllipse(centreX: 70, centreY: 400, width: 21, height: 21)
 /*:
  ## Template code
  The code below is necessary to see results in the Assistant Editor at right. Please do not remove.

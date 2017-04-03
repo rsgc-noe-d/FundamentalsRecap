@@ -31,7 +31,7 @@ import PlaygroundSupport
 // Create canvas
 let canvas = Canvas(width: 400, height: 400)
 canvas.translate(byX: 200, byY: 200)
-
+canvas.rotate(by: 45)
 // Draw slightly thicker lines
 canvas.defaultLineWidth = 4
 
@@ -42,6 +42,7 @@ canvas.drawText(message: "y", size: 24, x: 10, y: 170)
 // Draw the horizontal axis and label it 
 canvas.drawLine(fromX: -400, fromY: 0, toX: 400, toY: 0)
 canvas.drawText(message: "x", size: 24, x: 170, y: 10)
+canvas.rotate(by: 45)
 
 /*:
  ## Challenge 1
