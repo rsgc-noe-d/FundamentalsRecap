@@ -25,7 +25,7 @@ import Cocoa
 import PlaygroundSupport
 
 // Create canvas
-let canvas = Canvas(width: 490, height: 450)
+let canvas = Canvas(width: 480, height: 450)
 
 // set up
 
@@ -33,19 +33,54 @@ canvas.drawShapesWithFill = false
 canvas.defaultBorderWidth = 10
 canvas.defaultLineWidth = 10
 
-// make a cicle - brown
+for x in stride(from: 40, to: 500, by: 80){
+// make a cicle - brown - top
 
 canvas.borderColor = Color.init(hue: 26, saturation: 69, brightness: 37, alpha: 100)
-canvas.drawEllipse(centreX: 70, centreY: 400, width: 60, height: 60)
+canvas.drawEllipse(centreX: x, centreY: 400, width: 60, height: 60)
 
 
-// make a circle - Orange
+// make a circle - Orange - top
 canvas.borderColor = Color.init(hue: 22, saturation: 93, brightness: 90, alpha: 100)
-canvas.drawEllipse(centreX: 70, centreY: 400, width: 41, height: 41)
+canvas.drawEllipse(centreX: x, centreY: 400, width: 41, height: 41)
 
-// make a circle - Yellow
+// make a circle - Yellow - top
 canvas.borderColor = Color.init(hue: 53, saturation: 93, brightness: 98, alpha: 100)
-canvas.drawEllipse(centreX: 70, centreY: 400, width: 21, height: 21)
+    canvas.drawEllipse(centreX: x, centreY: 400, width: 21, height: 21)
+}
+
+for y in stride(from: 0, to: 500, by: 80){
+    // make a cicle - brown - top
+    
+    canvas.borderColor = Color.init(hue: 26, saturation: 69, brightness: 37, alpha: 100)
+    canvas.drawEllipse(centreX: y, centreY: 300, width: 21, height: 21)
+    
+    
+    // make a circle - Orange - top
+    canvas.borderColor = Color.init(hue: 22, saturation: 93, brightness: 90, alpha: 100)
+    canvas.drawEllipse(centreX: y, centreY: 300, width: 41, height: 41)
+    
+    // make a circle - Yellow - top
+    canvas.borderColor = Color.init(hue: 53, saturation: 93, brightness: 98, alpha: 100)
+    canvas.drawEllipse(centreX: y, centreY: 300, width: 60, height: 60)
+}
+
+canvas.drawShapesWithFill = true
+canvas.defaultBorderWidth = 1
+canvas.defaultLineWidth = 10
+
+canvas.borderColor = Color.white
+canvas.fillColor = Color.white
+canvas.drawRectangle(bottomLeftX: 0, bottomLeftY: 300, width: 480, height: 100)
+
+
+for x in stride(from: 40, to: 500, by: 80){
+    canvas.lineColor = Color.init(hue: 53, saturation: 93, brightness: 98, alpha: 100)
+    canvas.drawLine(fromX: x+10, fromY: 301, toX: x+10, toY: 399)
+}
+
+
+
 /*:
  ## Template code
  The code below is necessary to see results in the Assistant Editor at right. Please do not remove.
